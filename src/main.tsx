@@ -77,7 +77,8 @@ if (isDevelopment) {
       }),
       commit: debounce(async function () {
         hidePopup();
-        commit(true, `[logseq-plugin-git:commit] ${new Date().toISOString()}`);
+        await commit(true, `[logseq-plugin-git:commit] ${new Date().toISOString()}`);
+        checkStatus();
       }),
       push: debounce(async function () {
         setPluginStyle(LOADING_STYLE);
@@ -192,6 +193,17 @@ if (isDevelopment) {
       });
     }
 
+    logseq.App.registerCommandPalette(
+      {
+        key: "logseq-plugin-git:commit",
+        label: "Commit",
+        keybinding: {
+          binding: "alt+shift+s",
+          mode: "global",
+        },
+      },
+      () => operations.commit()
+    );
     logseq.App.registerCommandPalette(
       {
         key: "logseq-plugin-git:commit&push",
