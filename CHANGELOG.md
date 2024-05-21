@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/haydenull/logseq-plugin-git/compare/v1.5.5...v1.6.0) (2024-05-21)
+
+
+### Bug Fixes
+
+* :bug: release action error ([52d170b](https://github.com/haydenull/logseq-plugin-git/commit/52d170b88f4f1edb28810fe26a501978b0cfde6b))
+
+
+### Features
+
+* New keyboard shortcut to commit without pushing ([#59](https://github.com/haydenull/logseq-plugin-git/issues/59)) ([fc799b8](https://github.com/haydenull/logseq-plugin-git/commit/fc799b8a8a364487db5c44631d3982323343926d))
+
 ## [1.5.5](https://github.com/haydenull/logseq-plugin-git/compare/v1.5.4...v1.5.5) (2023-12-28)
 
 
