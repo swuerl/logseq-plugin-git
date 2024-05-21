@@ -6,6 +6,7 @@ import { BUTTONS, LOADING_STYLE, SETTINGS_SCHEMA } from "./helper/constants";
 import {
   checkout,
   commit,
+  commitMessage,
   log,
   pull,
   pullRebase,
@@ -77,7 +78,7 @@ if (isDevelopment) {
       }),
       commit: debounce(async function () {
         hidePopup();
-        await commit(true, `[logseq-plugin-git:commit] ${new Date().toISOString()}`);
+        await commit(true, commitMessage());
         checkStatus();
       }),
       push: debounce(async function () {
@@ -95,7 +96,7 @@ if (isDevelopment) {
         if (changed) {
           const res = await commit(
               true,
-              `[logseq-plugin-git:commit] ${new Date().toISOString()}`
+              commitMessage()
           );
           if (res.exitCode === 0) await push(true);
         }
