@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/haydenull/logseq-plugin-git/compare/v1.6.0...v1.7.0) (2024-05-21)
+
+
+### Features
+
+* Added Custom Commit Message ([#60](https://github.com/haydenull/logseq-plugin-git/issues/60)) ([3773f8b](https://github.com/haydenull/logseq-plugin-git/commit/3773f8bbcf5a1004fa93d8af6c043c62a4104d9e))
+
 # [1.6.0](https://github.com/haydenull/logseq-plugin-git/compare/v1.5.5...v1.6.0) (2024-05-21)
 
 
